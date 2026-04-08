@@ -5,6 +5,13 @@ namespace App\Providers;
 use Illuminate\Support\Facades\Gate;
 use Spatie\Permission\Models\Permission;
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
+use App\Models\Service;
+use App\Models\Customer;
+use App\Models\User;
+use App\Policies\ServicePolicy;
+use App\Policies\CustomerPolicy;
+use App\Policies\UserPolicy;
+
 
 class AuthServiceProvider extends ServiceProvider
 {

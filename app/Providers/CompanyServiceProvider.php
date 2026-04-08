@@ -102,7 +102,8 @@ class CompanyServiceProvider extends ServiceProvider
 
             // Timezone and Carbon
             date_default_timezone_set($company['timezone']);
-            Carbon::setLocale($company['timezone']);
+            // Carbon::setLocale($company['timezone']);
+Carbon::setLocale(config('app.locale'));
             (new Carbon())->settings(['strictMode' => true]);
 
             // Mail
